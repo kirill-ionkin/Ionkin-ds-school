@@ -1,3 +1,6 @@
+import pytest
+
+
 class Solution:
     def isValid(self, s: str) -> bool:
         same_brackets = {")": "(", "]": "[", "}": "{"}
@@ -16,3 +19,21 @@ class Solution:
                     return False
 
         return False if len(stack) else True
+
+
+@pytest.mark.parametrize(
+    "test_input, expected",
+    [
+        ("", True),
+        ("[]", True),
+        ("{}", True),
+        ("()", True),
+        ("{{{}}}", True),
+        ("[([)]]", False),
+        ("((())))", False),
+        ("(({)})", False),
+        ("[][][]{}{}{}()()()", True),
+    ],
+)
+def test_isvalid(test_input, expected):
+    assert Solution().isValid(test_input) is expected
