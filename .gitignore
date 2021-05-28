@@ -3,3 +3,4 @@
 .pre-commit-config.yaml
 __pycache__/
 .ipynb_checkpoints
+numba_screen.png
