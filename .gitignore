@@ -5,3 +5,5 @@ __pycache__/
 .ipynb_checkpoints
 numba_screen.png
 hw_6(deep_learning)/data
+hw_6(deep_learning)/unet_dump_recent.zip
+hw_6(deep_learning)/unet_2_dump_recent.zip

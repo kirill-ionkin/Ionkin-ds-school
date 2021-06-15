@@ -5,6 +5,19 @@
 в школе Data Science от Сбербанка
 
 
+## Домашние задания
+
+Все домашние задания находятся в соответствующих папках в данном репозитории(кроме финального проекта)
+
+- hw_1
+- hw_2(industrial_development)
+- hw_3(optimization_gradient_descent)
+- hw_4(math-optional)
+- hw_5(kaggle)
+- hw_6_(deep_learning)
+- [Final project](https://github.com/kirill-ionkin/NST_Gatys)
+
+
 ## Оглавление
 
 Материалы(презентации, juputer notebooks, etc. в папке materials)
