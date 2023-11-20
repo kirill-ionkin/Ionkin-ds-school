@@ -40,8 +40,7 @@ def parse_arguments():
     parser.add_argument("--n_epochs", type=int, default=10)
     parser.add_argument("--batch_size", type=int, default=5)
     parser.add_argument("--learning_rate", type=float, default=0.001)
-    args = parser.parse_args()
-    return args
+    return parser.parse_args()
 
 
 def main():
@@ -67,7 +66,7 @@ def main():
         print("Current epoch: ", epoch)
         epoch_loss = 0
         model.train(True)
-        for i, (input_batch, target_batch) in enumerate(tqdm(dl)):
+        for input_batch, target_batch in tqdm(dl):
             input_batch = Variable(input_batch).cuda()
             target_batch = Variable(target_batch).cuda()
             output_batch = model(input_batch)

@@ -158,9 +158,6 @@ class Unet_2(SegmenterModel):
         d2 = self.dec_conv2(
             torch.cat((self.unpool(d1, indices2), enc_conv1_output), dim=1)
         )
-        d3 = self.dec_conv3(
+        return self.dec_conv3(
             torch.cat((self.unpool(d2, indices1), enc_conv0_output), dim=1)
-        )  # no activation
-
-        # d3_activation = self.sigmoid(d3)
-        return d3
+        )

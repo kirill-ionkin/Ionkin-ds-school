@@ -5,7 +5,7 @@ class Solution:
     def isValid(self, s: str) -> bool:
         same_brackets = {")": "(", "]": "[", "}": "{"}
         open_brackets = ("(", "[", "{")
-        stack = list()
+        stack = []
 
         for bracket in s:
             if bracket in open_brackets:
@@ -18,7 +18,7 @@ class Solution:
                 except IndexError:
                     return False
 
-        return False if len(stack) else True
+        return not len(stack)
 
 
 @pytest.mark.parametrize(

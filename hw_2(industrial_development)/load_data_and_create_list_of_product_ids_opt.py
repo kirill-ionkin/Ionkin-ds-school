@@ -14,12 +14,11 @@ def load_data():
 
 
 def create_list_of_product_ids(pairwise_counter):
-    product_ids = [
+    return [
         product_id
         for product_id in pairwise_counter.index_mapper.keys()
         if product_id != pairwise_counter.total_key
     ]
-    return product_ids
 
 
 if __name__ == "__main__":
