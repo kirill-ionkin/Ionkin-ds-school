@@ -45,9 +45,7 @@ class CarvanaDataset(dt.Dataset):
         # (https://github.com/python-pillow/Pillow/issues/835)
         with open(path, "rb") as infile:
             with Image.open(infile) as img:
-                if is_input:
-                    return img.convert("RGB")  # конвертируем в RGB
-                return img.convert("1")  # конвертируем в ЧБ
+                return img.convert("RGB") if is_input else img.convert("1")
 
     def pil_save(self, tensor, img_path):
         image = to_img(tensor)
